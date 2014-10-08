@@ -1,4 +1,4 @@
-# Key-Value Redis Store
+# Key Value Redis Store
 
 [![Author](http://img.shields.io/badge/author-@adammbalogh-blue.svg?style=flat)](https://twitter.com/adammbalogh)
 [![Build Status](https://img.shields.io/travis/adammbalogh/key-value-store-redis/master.svg?style=flat)](https://travis-ci.org/adammbalogh/key-value-store-redis)
@@ -15,9 +15,20 @@ This library provides a layer to a key value redis store.
 
 It uses the [predis/predis](https://github.com/nrk/predis) package.
 
-# Support
+# Installation
 
-[![Support with Gittip](http://img.shields.io/gittip/adammbalogh.svg?style=flat)](https://www.gittip.com/adammbalogh/)
+Install it through composer.
+
+```json
+{
+    "require": {
+        "adammbalogh/key-value-store-redis": "@stable"
+    }
+}
+```
+
+**tip:** you should browse the [`adammbalogh/key-value-store-redis`](https://packagist.org/packages/adammbalogh/key-value-store-redis)
+page to choose a stable version to use, avoid the `@stable` meta constraint.
 
 # Usage
 
@@ -37,22 +48,10 @@ $kvs->set('sample_key', 'Sample value');
 $kvs->get('sample_key');
 ```
 
-# Installation
-
-Install it through composer.
-
-```json
-{
-    "require": {
-        "adammbalogh/key-value-store-redis": "@stable"
-    }
-}
-```
-
-**tip:** you should browse the [`adammbalogh/key-value-store-redis`](https://packagist.org/packages/adammbalogh/key-value-store-redis)
-page to choose a stable version to use, avoid the `@stable` meta constraint.
-
 # API
 
-**Please visit the [API](https://github.com/adammbalogh/key-value-store/blob/master/readme.md#api) link in the abstract library.**
+**Please visit the [API](https://github.com/adammbalogh/key-value-store#api) link in the abstract library.**
 
+# Support
+
+[![Support with Gittip](http://img.shields.io/gittip/adammbalogh.svg?style=flat)](https://www.gittip.com/adammbalogh/)
