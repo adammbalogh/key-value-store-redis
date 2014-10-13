@@ -23,6 +23,7 @@ trait StringTrait
         if (!$this->has($key)) {
             throw new KeyNotFoundException();
         }
+
         return $this->getClient()->append($key, $value);
     }
 
@@ -39,6 +40,7 @@ trait StringTrait
         if (!$this->has($key)) {
             throw new KeyNotFoundException();
         }
+
         return $this->getClient()->decr($key);
     }
 
@@ -56,6 +58,7 @@ trait StringTrait
         if (!$this->has($key)) {
             throw new KeyNotFoundException();
         }
+
         return $this->getClient()->decrby($key, $decrement);
     }
 
@@ -73,6 +76,7 @@ trait StringTrait
         if (is_null($getResult)) {
             throw new KeyNotFoundException();
         }
+
         return $getResult;
     }
 
@@ -90,6 +94,7 @@ trait StringTrait
         if ($length === 0) {
             throw new KeyNotFoundException();
         }
+
         return $length;
     }
 
@@ -106,6 +111,7 @@ trait StringTrait
         if (!$this->has($key)) {
             throw new KeyNotFoundException();
         }
+
         return $this->getClient()->incr($key);
     }
 
@@ -123,6 +129,7 @@ trait StringTrait
         if (!$this->has($key)) {
             throw new KeyNotFoundException();
         }
+
         return $this->getClient()->incrby($key, $increment);
     }
 

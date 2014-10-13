@@ -62,6 +62,7 @@ trait KeyTrait
         } elseif ($ttl === -1) {
             throw new \Exception('Key exists but has no associated expire');
         }
+
         return $ttl;
     }
 
