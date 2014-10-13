@@ -2,6 +2,7 @@
 
 [![Author](http://img.shields.io/badge/author-@adammbalogh-blue.svg?style=flat)](https://twitter.com/adammbalogh)
 [![Build Status](https://img.shields.io/travis/adammbalogh/key-value-store-redis/master.svg?style=flat)](https://travis-ci.org/adammbalogh/key-value-store-redis)
+[![Coverage Status](https://img.shields.io/coveralls/adammbalogh/key-value-store-redis.svg?style=flat)](https://coveralls.io/r/adammbalogh/key-value-store-redis)
 [![Quality Score](https://img.shields.io/scrutinizer/g/adammbalogh/key-value-store-redis.svg?style=flat)](https://scrutinizer-ci.com/g/adammbalogh/key-value-store-redis)
 [![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![Packagist Version](https://img.shields.io/packagist/v/adammbalogh/key-value-store-redis.svg?style=flat)](https://packagist.org/packages/adammbalogh/key-value-store-redis)
@@ -14,6 +15,8 @@
 This library provides a layer to a key value redis store.
 
 It uses the [predis/predis](https://github.com/nrk/predis) package.
+
+Check out the [abstract library](https://github.com/adammbalogh/key-value-store) to see the other adapters and the Api.
 
 # Installation
 
@@ -51,6 +54,20 @@ $kvs->get('sample_key');
 # API
 
 **Please visit the [API](https://github.com/adammbalogh/key-value-store#api) link in the abstract library.**
+
+# Toolset
+
+| Key                 | String              | Server           |
+|------------------   |---------------------|------------------|
+| ✔ delete            | ✔ append            | ✔ flush          |
+| ✔ expire            | ✔ decrement         |                  |
+| ✔ getKeys           | ✔ decrementBy       |                  |
+| ✔ getTtl            | ✔ get               |                  |
+| ✔ has               | ✔ getValueLength    |                  |
+| ✔ persist           | ✔ increment         |                  |
+|                     | ✔ incrementBy       |                  |
+|                     | ✔ set               |                  |
+|                     | ✔ setIfNotExists    |                  |
 
 # Support
 
