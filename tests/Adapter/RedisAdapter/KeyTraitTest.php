@@ -46,20 +46,6 @@ class KeyTraitTest extends AbstractKvsRedisTestCase
      * @param RedisAdapter $dummyRedisAdapter
      * @param RedisClient $dummyPredis
      */
-    public function testGetKeys(KeyValueStore $kvs, RedisAdapter $dummyRedisAdapter, RedisClient $dummyPredis)
-    {
-        $dummyPredis->shouldReceive('keys')->andReturn(['a', 'b']);
-
-        $this->assertCount(2, $kvs->getKeys());
-    }
-
-    /**
-     * @dataProvider kvsProvider
-     *
-     * @param KeyValueStore $kvs
-     * @param RedisAdapter $dummyRedisAdapter
-     * @param RedisClient $dummyPredis
-     */
     public function testGetTtl(KeyValueStore $kvs, RedisAdapter $dummyRedisAdapter, RedisClient $dummyPredis)
     {
         $dummyPredis->shouldReceive('ttl')->with('key-e')->andReturn(11);

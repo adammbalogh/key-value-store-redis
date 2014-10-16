@@ -2,15 +2,15 @@
 
 use AdammBalogh\KeyValueStore\Adapter\RedisAdapter\ClientTrait;
 use AdammBalogh\KeyValueStore\Adapter\RedisAdapter\KeyTrait;
+use AdammBalogh\KeyValueStore\Adapter\RedisAdapter\ValueTrait;
 use AdammBalogh\KeyValueStore\Adapter\RedisAdapter\ServerTrait;
-use AdammBalogh\KeyValueStore\Adapter\RedisAdapter\StringTrait;
 use Predis\Client as RedisClient;
 
 class RedisAdapter extends AbstractAdapter
 {
-    use ClientTrait, KeyTrait, StringTrait, ServerTrait {
+    use ClientTrait, KeyTrait, ValueTrait, ServerTrait {
         ClientTrait::getClient insteadof KeyTrait;
-        ClientTrait::getClient insteadof StringTrait;
+        ClientTrait::getClient insteadof ValueTrait;
         ClientTrait::getClient insteadof ServerTrait;
     }
 
